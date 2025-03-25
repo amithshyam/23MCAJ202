@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            /* Styling the form container */
+            form {
+                background-color: #f4f1ea; /* Light beige background */
+                border: 2px solid #8b5e3c; /* Warm brown border */
+                border-radius: 8px; /* Rounded corners */
+                padding: 20px;
+                width: 300px;
+                margin: auto;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+                font-family: "Arial", sans-serif; /* Clean font */
+            }
+
+            /* Styling the input fields */
+            input[type="text"], input[type="email"], input[type="number"] {
+                width: 100%;
+                padding: 10px;
+                margin: 8px 0;
+                border: 1px solid #d9c2a3; /* Soft tan border */
+                border-radius: 4px;
+                background-color: #f9f5f0; /* Light cream background */
+                box-sizing: border-box;
+                font-size: 14px;
+            }
+
+            /* Styling the submit button */
+            input[type="submit"] {
+                background-color: #8b5e3c; /* Warm brown */
+                color: #ffffff; /* White text */
+                padding: 10px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                width: 100%;
+                font-size: 14px;
+            }
+
+            input[type="submit"]:hover {
+                background-color: #6f4e37; 
+            }
+
+            label {
+                margin-bottom: 8px;
+                display: block;
+                font-weight: bold;
+                color: #5a3d2b; 
+            }
+
+            
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f7f3ef; 
+                color: #333; 
+                text-align: center;
+                padding: 20px;
+            }
+        </style>
+        <script>
+            function validation() {
+                let x = document.forms["jsfrom"]["fname"].value;
+                let y = document.forms["jsfrom"]["email"].value;
+                let z = document.forms["jsfrom"]["phone"].value;
+
+                if (x == "") {
+                    alert("The name field must be filled");
+                    return false;
+                }
+                if (y == "") {
+                    alert("Email must be filled");
+                    return false;
+                }
+                if (z == "") {
+                    alert("Please fill your phone number");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <h2 style="color: #5a3d2b;">Brown-Themed Registration Form</h2>
+        <form name="jsfrom" onsubmit="return validation()" method="post">
+            <label for="fname">Name:</label>
+            <input type="text" name="fname" id="fname"><br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email"><br>
+            <label for="phone">Phone:</label>
+            <input type="text" name="phone" id="phone"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>

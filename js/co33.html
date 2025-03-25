@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover Effect</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        img {
+            border: 5px solid #333;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+            width: 300px;
+            height: 300px;
+        }
+        #text {
+            font-size: 20px;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Hover Over the Image</h2>
+    
+    <img id="mainImage" src="C:\Users\AMITH SHYAM\OneDrive\Desktop\hai.jpg" alt="Original Image" 
+         onmouseover="changeContent()" 
+         onmouseout="resetContent()">
+
+    <p id="text">Hover over the image to see the change!</p>
+
+    <script>
+        function changeContent() {
+            document.getElementById("mainImage").src = "C:/Users/AMITH SHYAM/OneDrive/Desktop/hello.jpg";
+            document.getElementById("text").innerText = "You hovered over the image!";
+        }
+
+        function resetContent() {
+            document.getElementById("mainImage").src ="C:/Users/AMITH SHYAM/OneDrive/Desktop/hai.jpg";
+            document.getElementById("text").innerText = "Hover over the image to see the change!";
+        }
+    </script>
+
+</body>
+</html>
